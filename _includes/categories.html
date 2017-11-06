@@ -1,0 +1,9 @@
+<nav id="categorias">
+    <ul>
+      {% for categoria in site.categories %}
+      <li class="categoria">
+        <a href="/blog/categorias/{{ categoria | first }}">{{ categoria | first }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+</nav>

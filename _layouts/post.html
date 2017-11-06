@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<div id="blog"> 
+  <section id="posts">
+    <article class="post">
+      <div class="post-datos">
+        <div class="post-dato">
+          <h4>Fecha</h4>
+          <h2>{{page.date | date: "%Y / %m /%d" }}</h2>
+        </div>
+        <div class="post-dato">
+          <h4>Autor</h4>
+          <h2>{{page.author}}</h2>
+        </div>
+        <div class="post-dato">
+          <h4>Categorias</h4>
+          <h2>{{page.categories | join: ", "}}</h2>
+        </div>
+        <div class="post-social">
+           {% include social-buttons.html %}
+        </div>
+      </div>
+      <div class="post-articulo">
+        <a href="{{page.url}}"><img src="{{page.previewImagenUrl}}" class="flexible post-imagen-preview"> </a>
+
+        <h1 class="post-titulo-preview"><a href="{{page.url}}">{{page.title}}</a></h1>
+
+        <div class="post-social movil">
+          <h4>Publicado por: <span>{{page.author}}</span></h4>
+          <h4>Fecha <span>{{page.date | date: "%Y / %m /%d" }}</span></h4>
+          {% include social-buttons.html %}
+        </div>       
+        <div class="post-completo">
+          {{content}}
+        </div>
+        <div class="comentarios">
+          <h2>COMENTARIOS</h2>
+          <div class="fb-comments" data-href="http://www.codeismo.com{{page.url}}" data-numposts="5" data-colorscheme="light"></div>
+        </div>    
+      </div>
+    </article>
+  </section>
+  {% include categories.html %}
+</div>
+

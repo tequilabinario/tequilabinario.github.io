@@ -1,0 +1,29 @@
+---
+layout: default
+idSeccion: contacto
+permalink: /contacto/
+---
+<div id="contacto-imagen" class="imagen-seccion">
+		<h2>Hablemos :)</h2>
+		<!-- <h2>▾</h2> -->
+</div>
+<div id="contacto">
+	<form id="forma-contacto" method="post" action="{{sitioURL}}/contactar">
+		<div class="contacto-renglon">
+			<div class="contacto-dato">
+				<h2>NOMBRE<span>*</span></h2>
+				<input name="nombre" placeholder="Escribe tu nombre" required/>
+			</div>
+			<div class="contacto-dato">
+				<h2>EMAIL<span>*</span></h2>
+				<input name="email" placeholder="Escribe tu email" required/>
+			</div>
+		</div>
+
+		<div class="contacto-textarea">
+			<h2>¿EN QUÉ PODEMOS AYUDARTE?<span>*</span></h2>
+			<textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+		</div>
+		<input id="boton-contacto" class="boton" type="submit" value="Enviar datos"/>
+	</form>
+</div>

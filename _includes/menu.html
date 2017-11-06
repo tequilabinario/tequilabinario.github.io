@@ -1,0 +1,36 @@
+<header> 
+	<nav>
+		<div id="logo">
+			<a href="/">TEQUILA BINARIO</a>
+		</div>
+		<div id="menu-responsive">
+			<img src="/assets/img/menu_rayas.svg" id="menu-responsive-img"/>
+		</div>
+		<div id="menu-social">
+			<div class="fb-like" data-href="https://www.facebook.com/TequilaBinario" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		</div>
+		<ul id="menu" class="ocultar-en-moviles">
+			<li  {%if page.idSeccion=="index"%}class="menu-seleccionado"{%endif%}>
+				<a  id="index-link" href="/">HOME</a>
+			</li>
+			<li {%if page.idSeccion=="cursos"%}class="menu-seleccionado"{%endif%}>
+				<a  id="cursos-link" href="/cursos">CURSOS</a>
+			</li>
+			<li {%if page.idSeccion=="blog"%}class="menu-seleccionado"{%endif%}>
+				<a  id="blog-link" href="/blog">BLOG</a>
+			</li>
+			<!--
+			<li {%if page.idSeccion=="contacto"%}class="menu-seleccionado"{%endif%}>
+				<a  id="contacto-link" href="/contacto">CONTACTO</a>
+			</li>
+			-->
+			<li {%if page.idSeccion=="acerca"%}class="menu-seleccionado"{%endif%}>
+				<a  id="acerca-link" href="/acerca">ACERCA</a>
+			</li>
+		</ul>
+		<div class="clear"></div>
+	</nav>
+</header>
+<div id="header-relleno">
+	&nbsp;
+</div>
